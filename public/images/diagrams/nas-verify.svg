@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="t d" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="t">Safe photo migration</title>
+  <desc id="d">The only copy of the photos on a Seagate drive is copied to a desktop PC, verified with robocopy as 10,115 files with zero mismatched, and only then are all four drives wiped and the photos copied back to the NAS pool.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52525b"/></marker>
+  </defs>
+  <rect width="1200" height="380" fill="#f4f4f5"/>
+  <g text-anchor="middle">
+    <rect x="30" y="80" width="190" height="150" rx="12" fill="#fff" stroke="#d4d4d8" stroke-width="2"/>
+    <text x="125" y="130" font-size="20" font-weight="600" fill="#09090b">Seagate drive</text><text x="125" y="162" font-size="15" fill="#52525b">only copy</text><text x="125" y="186" font-size="15" fill="#52525b">of the photos</text>
+
+    <rect x="270" y="80" width="190" height="150" rx="12" fill="#fff" stroke="#d4d4d8" stroke-width="2"/>
+    <text x="365" y="130" font-size="20" font-weight="600" fill="#09090b">Desktop PC</text><text x="365" y="162" font-size="15" fill="#52525b">temporary copy</text><text x="365" y="186" font-size="15" fill="#52525b">~150 GB</text>
+
+    <rect x="510" y="80" width="200" height="150" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+    <text x="610" y="124" font-size="20" font-weight="700" fill="#2563eb">VERIFY</text><text x="610" y="154" font-size="15" fill="#09090b">robocopy list-only</text><text x="610" y="178" font-size="15" fill="#09090b">10,115 files</text><text x="610" y="202" font-size="15" font-weight="600" fill="#09090b">0 missing &#183; 0 mismatched</text>
+
+    <rect x="760" y="80" width="190" height="150" rx="12" fill="#fff" stroke="#b91c1c" stroke-width="2"/>
+    <text x="855" y="130" font-size="20" font-weight="600" fill="#09090b">Wipe + ext4</text><text x="855" y="162" font-size="15" fill="#52525b">all 4 drives</text><text x="855" y="186" font-size="15" font-weight="600" fill="#b91c1c">irreversible step</text>
+
+    <rect x="1000" y="80" width="170" height="150" rx="12" fill="#fff" stroke="#d4d4d8" stroke-width="2"/>
+    <text x="1085" y="130" font-size="20" font-weight="600" fill="#09090b">NAS pool</text><text x="1085" y="162" font-size="15" fill="#52525b">copied back</text><text x="1085" y="186" font-size="15" fill="#52525b">over the network</text>
+  </g>
+  <g fill="none" stroke="#52525b" stroke-width="3" marker-end="url(#a)">
+    <path d="M222 155 H266"/><path d="M462 155 H506"/><path d="M712 155 H756"/><path d="M952 155 H996"/>
+  </g>
+  <g text-anchor="middle" font-size="20" fill="#09090b">
+    <text x="600" y="300" font-weight="600">Verify, then wipe.</text>
+    <text x="600" y="332" font-size="17" fill="#52525b">Every step before the red box is reversible. The wipe only ran after verification passed.</text>
+  </g>
+</svg>

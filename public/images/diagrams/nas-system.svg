@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="t d" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="t">Home NAS system diagram</title>
+  <desc id="d">A desktop PC, a phone, and remote devices reach the home router. The router connects over Ethernet to an MSI laptop running OpenMediaVault, which uses a powered USB hub with three data drives and one parity drive.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52525b"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1200" height="620" fill="#f4f4f5"/>
+
+  <g font-size="23" font-weight="600" fill="#09090b" text-anchor="middle">
+    <rect x="40" y="110" width="220" height="92" rx="12" fill="#fff" stroke="#d4d4d8" stroke-width="2"/><text x="150" y="152">Desktop PC</text><text x="150" y="180" font-size="16" font-weight="400" fill="#52525b">File Explorer drive</text>
+    <rect x="40" y="260" width="220" height="92" rx="12" fill="#fff" stroke="#d4d4d8" stroke-width="2"/><text x="150" y="302">Phone</text><text x="150" y="330" font-size="16" font-weight="400" fill="#52525b">Immich app + backup</text>
+    <rect x="40" y="410" width="220" height="92" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2" stroke-dasharray="7 6"/><text x="150" y="452">Away from home</text><text x="150" y="480" font-size="16" font-weight="400" fill="#52525b">via Tailscale</text>
+  </g>
+
+  <g fill="none" stroke="#52525b" stroke-width="3" marker-end="url(#a)">
+    <path d="M260 156 H300 Q325 156 325 181 V281 Q325 306 350 306"/>
+    <path d="M260 306 H348"/>
+  </g>
+  <path d="M260 456 H300 Q325 456 325 431 V331 Q325 306 350 306" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#b)"/>
+  <text x="300" y="500" font-size="15" fill="#2563eb" font-weight="600">encrypted</text>
+
+  <g text-anchor="middle">
+    <rect x="352" y="244" width="190" height="124" rx="12" fill="#fff" stroke="#09090b" stroke-width="2"/>
+    <text x="447" y="298" font-size="23" font-weight="600" fill="#09090b">Home router</text>
+    <text x="447" y="326" font-size="15" fill="#52525b">fixed address</text>
+    <text x="447" y="346" font-size="15" fill="#52525b">reserved for NAS</text>
+  </g>
+  <path d="M542 306 H632" fill="none" stroke="#52525b" stroke-width="3" marker-end="url(#a)"/>
+  <text x="587" y="288" text-anchor="middle" font-size="15" fill="#52525b">Ethernet</text>
+
+  <g text-anchor="middle">
+    <rect x="636" y="70" width="290" height="480" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="781" y="118" font-size="23" font-weight="700" fill="#09090b">MSI laptop (the NAS)</text>
+    <text x="781" y="144" font-size="15" fill="#52525b">wired · lid closed · 24/7</text>
+    <g font-size="17" fill="#09090b" font-weight="500">
+      <rect x="660" y="176" width="242" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="781" y="209">OpenMediaVault 8 · Debian 13</text>
+      <rect x="660" y="248" width="116" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="718" y="281">SMB share</text>
+      <rect x="786" y="248" width="116" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="844" y="281">Immich</text>
+      <rect x="660" y="320" width="116" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="718" y="353">mergerfs</text>
+      <rect x="786" y="320" width="116" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="844" y="353">SnapRAID</text>
+      <rect x="660" y="392" width="242" height="54" rx="8" fill="#fff" stroke="#bfdbfe" stroke-width="2"/><text x="781" y="425">Docker · Tailscale</text>
+    </g>
+    <text x="781" y="500" font-size="15" fill="#52525b">512 GB NVMe: system + app data</text>
+  </g>
+
+  <path d="M926 310 H958" fill="none" stroke="#52525b" stroke-width="3" marker-end="url(#a)"/>
+  <g text-anchor="middle">
+    <rect x="962" y="70" width="200" height="56" rx="10" fill="#fff" stroke="#09090b" stroke-width="2"/><text x="1062" y="106" font-size="19" font-weight="600" fill="#09090b">Powered USB hub</text>
+    <g fill="#fff" stroke="#d4d4d8" stroke-width="2">
+      <rect x="962" y="150" width="200" height="80" rx="10"/><rect x="962" y="246" width="200" height="80" rx="10"/><rect x="962" y="342" width="200" height="80" rx="10"/>
+    </g>
+    <rect x="962" y="438" width="200" height="80" rx="10" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+    <g font-size="19" font-weight="600" fill="#09090b"><text x="1062" y="184">Toshiba 1TB</text><text x="1062" y="280">Toshiba 1TB</text><text x="1062" y="376">Toshiba 1TB</text><text x="1062" y="472">Seagate 1TB</text></g>
+    <g font-size="15" fill="#52525b"><text x="1062" y="208">data · d1</text><text x="1062" y="304">data · d2</text><text x="1062" y="400">data · d3</text></g>
+    <text x="1062" y="496" font-size="15" fill="#2563eb" font-weight="600">parity (protection)</text>
+  </g>
+</svg>

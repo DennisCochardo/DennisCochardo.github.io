@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="t d" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="t">Home NAS storage design</title>
+  <desc id="d">Three Toshiba data drives are pooled by mergerfs into one 2.7 terabyte folder shared as NAS. A fourth Seagate drive outside the pool holds SnapRAID parity and can rebuild any one data drive.</desc>
+  <rect width="1200" height="520" fill="#f4f4f5"/>
+  <g text-anchor="middle">
+    <rect x="60" y="40" width="720" height="76" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="420" y="87" font-size="23" font-weight="700" fill="#09090b">mergerfs pool: one ~2.7 TB folder, shared as &#8220;NAS&#8221;</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2" fill="none"><path d="M170 116 V190M420 116 V190M670 116 V190"/></g>
+
+  <g text-anchor="middle">
+    <g fill="#fff" stroke="#d4d4d8" stroke-width="2">
+      <rect x="60" y="190" width="220" height="170" rx="12"/><rect x="310" y="190" width="220" height="170" rx="12"/><rect x="560" y="190" width="220" height="170" rx="12"/>
+    </g>
+    <g font-size="21" font-weight="600" fill="#09090b"><text x="170" y="232">d1 &#183; Toshiba</text><text x="420" y="232">d2 &#183; Toshiba</text><text x="670" y="232">d3 &#183; Toshiba</text></g>
+    <g font-size="16" fill="#52525b"><text x="170" y="266">~50 GB used</text><text x="420" y="266">~50 GB used</text><text x="670" y="266">~50 GB used</text></g>
+    <g fill="#e4e4e7"><rect x="90" y="298" width="160" height="12" rx="6"/><rect x="340" y="298" width="160" height="12" rx="6"/><rect x="590" y="298" width="160" height="12" rx="6"/></g>
+    <g fill="#2563eb"><rect x="90" y="298" width="14" height="12" rx="6"/><rect x="340" y="298" width="14" height="12" rx="6"/><rect x="590" y="298" width="14" height="12" rx="6"/></g>
+    <g font-size="15" fill="#52525b"><text x="170" y="338">of ~916 GB</text><text x="420" y="338">of ~916 GB</text><text x="670" y="338">of ~916 GB</text></g>
+  </g>
+
+  <path d="M780 275 H838" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="8 7"/>
+  <text x="809" y="258" text-anchor="middle" font-size="15" fill="#2563eb" font-weight="600">sync</text>
+  <g text-anchor="middle">
+    <rect x="840" y="190" width="300" height="170" rx="12" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+    <text x="990" y="232" font-size="21" font-weight="700" fill="#2563eb">Seagate &#183; parity</text>
+    <g font-size="16" fill="#52525b"><text x="990" y="266">not in the pool, holds no files</text><text x="990" y="294">can rebuild any one of d1, d2, d3</text><text x="990" y="322">nightly sync &#183; weekly scrub</text></g>
+  </g>
+
+  <g text-anchor="middle" font-size="20" fill="#09090b">
+    <text x="600" y="430" font-weight="600">One drive (~0.9 TB) buys recovery from any single drive failure.</text>
+    <text x="600" y="462" font-size="17" fill="#52525b">3.6 TB raw becomes 2.7 TB usable. Today&#8217;s 151 GB of photos use about 6% of it.</text>
+  </g>
+</svg>
